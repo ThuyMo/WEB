@@ -68,7 +68,7 @@ div
 }
 ul
 {
-	list-style: none;
+	/* list-style: none; */
 	margin-bottom: 0px;
 }
 p
@@ -97,6 +97,7 @@ p a
 a, a:hover, a:visited, a:active, a:link
 {
 	text-decoration: none;
+	color:black;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -126,7 +127,7 @@ p::selection
 h1{font-size: 48px;}
 h2{font-size: 36px;}
 h3{font-size: 24px;}
-h4{font-size: 18px;}
+h4{font-size: 18px; color:green;}
 h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
@@ -1542,12 +1543,12 @@ select option
 
 .featured
 {
-	width: 57%;
-	-webkit-transform: translateY(60px);
+	width: 100%;
+	/* -webkit-transform: translateY(60px);
 	-moz-transform: translateY(60px);
 	-ms-transform: translateY(60px);
-	-o-transform: translateY(60px);
-	transform: translateY(60px);
+	-o-transform: translateY(60px); */
+	/* transform: translateY(60px); */
 }
 .tabbed_container
 {
@@ -1624,7 +1625,7 @@ select option
 }
 .featured_slider
 {
-	width: 100%;
+	width: 80%;
 }
 .featured_slider .slick-list
 {
