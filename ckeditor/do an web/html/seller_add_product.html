@@ -1,0 +1,443 @@
+<!-- https://preview.themeforest.net/item/classiera-classified-ads-wordpress-theme/full_screen_preview/14138208?ref=cirvitis&irgwc=1&clickid=Sq-X6n0uUxyORxWwUx0Mo3QwUkn1GHXBZWWs3E0&iradid=275988&irpid=369282&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_369282&utm_medium=affiliate&utm_source=impact_radius -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Đăng sản phẩm</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="OneTech shop project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">
+    <link href="../plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/slick-1.8.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="../styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="../styles/responsive.css">
+
+    <link rel="stylesheet" type="text/css" href="../styles/blog_styles.css">
+
+    <script src="../../ckeditor.js"></script>
+    <script>  
+        // Cấu hình lại toolbar, hiển thị một vài Button.
+        //CKEDITOR.config.toolbar = [  ['Font','FontSize'], ['Bold','Italic']  ];
+     
+        // Cấu hình lại màu nền giao diện.
+        CKEDITOR.config.uiColor = '#0E8CE4';
+        CKEDITOR.config.extraPlugins = 'timestamp';
+        // CKEDITOR.config.resize_enabled = false;
+        // CKEDITOR.config.width = '500px';
+        // CKEDITOR.config.height = '70px';
+
+        // CKEDITOR.config.toolbar = [    
+ 
+        //    { name: 'my_document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },
+            
+        //    { name: 'my_clipboard', items: [ 'Cut', 'Copy', 'Paste' ] },
+            
+        //    '/',
+            
+        //    { name: 'my_styles', items: [ 'Bold', 'Italic', 'Format' ] }
+            
+        // ];
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+    <div class="super_container">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <!-- Top Bar -->
+
+            <div class="top_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-flex flex-row">
+                            <div class="top_bar_contact_item">
+                                <div class="top_bar_icon"><img src="../images/phone.png" alt=""></div>+38 123 123 123</div>
+                                <div class="top_bar_contact_item">
+                                    <div class="top_bar_icon"><img src="../images/mail.png" alt=""></div><a href="#">daugiatructuyen@gmail.com</a></div>
+
+
+                                    <div class="top_bar_content ml-auto">
+                                        <div class="top_bar_menu">
+                                            <ul class="standard_dropdown top_bar_dropdown">
+                                                <div class="user_icon"><img src="../images/user.svg" alt=""></div>
+                                                <li>
+                                                    <a href="#">nttmo<i class="fas fa-chevron-down"></i></a>
+                                                    <ul>
+                                                        <li><a href="Update_info.html">Cập nhật thông tin</a></li>
+                                                        <li><a href="change_pass.html">Đổi mật khẩu</a></li>
+
+                                                    </ul>
+                                                </li>
+                                                <li>|</li>
+                                                <li>
+                                                    <a href="index.html">Đăng xuất<i class="fas fa-chevron-down"></i></a>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Header Main -->
+
+                    <div class="header_main">
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- Logo -->
+                                <div class="col-lg-2 col-sm-3 col-3 order-1">
+                                    <div class="logo_container">
+                                        <div class="logo"><a href="#">DauGia</a></div>
+                                    </div>
+                                </div>
+
+                                <!-- Search -->
+                                <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                                    <div class="header_search">
+                                        <div class="header_search_content">
+                                            <div class="header_search_form_container">
+                                                <form action="#" class="header_search_form clearfix">
+                                                    <input type="search" id="noidung_tk" required="required" class="header_search_input" placeholder="Tìm kiếm">
+                                                    <div class="custom_dropdown">
+                                                        <div class="custom_dropdown_list">
+                                                            <span class="custom_dropdown_placeholder clc">Tất cả</span>
+                                                            <i class="fas fa-chevron-down"></i>
+                                                            <ul class="custom_list clc">
+                                                                <li><a class="clc" href="#">Tất cả</a></li>
+                                                                <li><a class="clc" href="#">Máy tính xách tay</a></li>
+                                                                <li><a class="clc" href="#">Điện thoại di động</a></li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <a href="search_product.html"><button type="button"  class="btn btn-primary float-right header_search_button trans_300" value="Submit" onclick="search()"><img src="../images/search.png" alt=""></button></a>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Wishlist -->
+                                <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                                    <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                                        <div class="wishlist d-flex flex-row align-items-center justify-content-end">
+                                            <div class="wishlist_icon"><img src="../images/heart.png" alt=""></div>
+                                            <div class="wishlist_content">
+                                                <div class="wishlist_text"><a href="#">Đã thắng</a></div>
+                                                <div class="wishlist_count">10</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Cart -->
+                                        <div class="cart">
+                                            <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                                                <div class="cart_icon">
+                                                    <img src="../images/cart.png" alt="">
+                                                    <div class="cart_count"><span>20</span></div>
+                                                </div>
+                                                <div class="cart_content">
+                                                    <div class="cart_text"><a href="#">Lượt đấu</a></div>
+                                                    <div class="cart_price">$100</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Navigation -->
+
+                    <nav class="main_nav">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+
+                                    <div class="main_nav_content d-flex flex-row">
+
+                                        <!-- Categories Menu -->
+
+                                        <div class="cat_menu_container">
+                                            <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
+                                                <div class="cat_burger"><span></span><span></span><span></span></div>
+                                                <div class="cat_menu_text">Loại sản phẩm</div>
+                                            </div>
+
+                                            <ul class="cat_menu">
+                                                <li><a href="laptop.html">Máy tính xách tay <i class="fas fa-chevron-right ml-auto"></i></a></li>
+                                                <li><a href="mobiphone.html">Điện thoại di động<i class="fas fa-chevron-right"></i></a></li>
+
+                                            </ul>
+                                        </div>
+
+                                        <!-- Main Nav Menu -->
+
+                                        <div class="main_nav_menu ml-auto">
+                                            <ul class="standard_dropdown main_nav_dropdown">
+                                                <li><a href="index.html">Trang chủ<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="introduce.html">Giới thiệu<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="news.html">Tin tức<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="member.html">Thành viên<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="partner.html">Đối tác<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="contact.html">Liên hệ<i class="fas fa-chevron-down"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+
+
+
+
+                    <!-- Newsletter -->
+
+                    <div class="newsletter">
+                        <div class="container">
+
+
+                            <!-- Them san pham -->
+                            <hr>
+                            <h3>Thêm sản phẩm mới</h3>
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Tên sản phẩm</label>
+                                    <input type="text" class="form-control" id="proName" placeholder="Nhập tên sản phẩm">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Giá khỏi điểm</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Vd: 3000000 vnđ">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Bước giá</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Vd: 10%">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Giá mua ngay</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Vd: 3500000 vnđ">
+                                </div>
+                                <div class="form-group">
+                            <!-- <label for="exampleInputPassword1">Mô tả sản phẩm</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Vd: Xuất xứ ..."> -->
+                                    <label for="exampleInputPassword1">Mô tả sản phẩm</label>
+                                    <br>
+                                     <form action="" method="post">
+                                         <select onchange="createEditor( this.value );" id="languages" style="margin-left: 0px; color: black; ">
+                                            <option value="en-gb">English (United Kingdom)</option>
+                                            <option value="zh-cn">Chinese Simplified</option>
+                                            <option value="zh">Chinese Traditional</option>
+                                            <option value="vi">Vietnamese</option>
+                                         </select>
+                                         <br>
+
+                                         <textarea id="editor1" name="editor1"  cols="80" rows="10">
+                                               <p>Hello <strong>CKEditor</strong></p>
+                                         </textarea>
+
+
+
+
+                                         <script>
+                                            var editor;
+
+                                            function createEditor( languageCode ) {
+                                                if ( editor )
+                                                    editor.destroy();
+
+                                                // Thay thế <textarea id="editor1" với một CKEditor, sử dụng cấu hình mặc định
+                                                editor = CKEDITOR.replace( 'editor1', {
+                                                    language: languageCode,
+
+                                                    on: {
+                                                        instanceReady: function() {
+
+                                                            // Chờ cho tới khi editor sẵn sàng để sét language.
+                                                            var languages = document.getElementById( 'languages' );
+                                                            languages.value = this.langCode;
+                                                            languages.disabled = false;
+                                                        }
+                                                    }
+                                                });
+                                            }
+
+                                            // Tại thời điểm bắt đầu, tải ngôn ngữ mặc định.
+                                            createEditor( '' );
+
+                                         </script>
+
+                                          <!-- <script>
+
+                                               // Replace the <textarea id="editor1"> with an CKEditor
+                                               // instance, using default configurations.
+                                               CKEDITOR.replace( 'editor1', {
+                                                   uiColor: '#0E8CE4',
+                                                   // toolbar: [
+                                                   //     [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink' ],
+                                                   //     [ 'FontSize', 'TextColor', 'BGColor' ]
+                                                   // ]
+                                               });
+
+                                           </script> -->
+
+                                      </form>
+
+                                </div>
+                         <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Ảnh sản phẩm 1</label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Ảnh sản phẩm 2</label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Ảnh sản phẩm 3</label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+                        </form>
+
+                        <div class="form-check" style="margin-left: 10px;">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Có tự động gia hạn không?</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer -->
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-3 footer_col">
+                            <div class="footer_column footer_contact">
+                                <div class="logo_container">
+                                    <div style="font-family: Arial, Helvetica, sans-serif" class="logo"><a href="#">Đấu giá</a></div>
+                                </div>
+                                <div style="font-family: Arial, Helvetica, sans-serif" class="footer_title">Liên hệ 24/7</div>
+                                <div class="footer_phone">+38 068 005 3570</div>
+                                <div class="footer_contact_text">
+                                    <p>135B Trần Hưng Đạo</p>
+                                    <p>Quận 1, TP Hồ Chí Minh</p>
+                                </div>
+                                <div class="footer_social">
+                                    <ul>
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-google"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 offset-lg-2">
+                            <div class="footer_column">
+                                <div style="font-family: Arial, Helvetica, sans-serif" class="footer_title">Liên kết nhanh</div>
+                                <ul style="list-style: none;" class="footer_list">
+                                    <li><a href="introduce.html">Giới thiệu</a></li>
+                                    <li><a href="news.html">Tin tức</a></li>
+                                    <li><a href="member.html">Thành viên</a></li>
+                                    <li><a href="partner.html">Đối tác</a></li>
+                                    <li><a href="contact.html">Liên hệ</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Copyright -->
+
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                                <div class="copyright_content">
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </div>
+                                <div class="logos ml-sm-auto">
+                                    <ul class="logos_list">
+                                        <li>
+                                            <a href="#"><img src="../images/logos_1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../images/logos_2.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../images/logos_3.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../images/logos_4.png" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function search() {
+            // var x = parseInt(frmMain.txtX.value);
+            return true;
+        }
+    </script>
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../styles/bootstrap4/popper.js"></script>
+    <script src="../styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="../plugins/greensock/TweenMax.min.js"></script>
+    <script src="../plugins/greensock/TimelineMax.min.js"></script>
+    <script src="../plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="../plugins/greensock/animation.gsap.min.js"></script>
+    <script src="../plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="../plugins/slick-1.8.0/slick.js"></script>
+    <script src="../plugins/easing/easing.js"></script>
+    <script src="../js/custom.js"></script>
+
+   
+</body>
+
+</html>

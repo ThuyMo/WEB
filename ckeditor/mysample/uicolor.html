@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>UI Color Picker</title>
+   
+   <script src="../ckeditor.js"></script>
+   
+</head>
+<body>
+
+	<select>
+	  <option value="volvo">Volvo</option>
+	  <option value="saab">Saab</option>
+	  <option value="vw">VW</option>
+	  <option value="audi" selected>Audi</option>
+	</select>
+
+	
+   <h1>UI Color</h1>
+   
+   <textarea id="editor1" name="editor1" cols="80" rows="10">
+       <p>Hello <strong>CKEditor</strong></p>
+   </textarea>
+   
+   <script>
+ 
+       // Replace the <textarea id="editor1"> with an CKEditor
+       // instance, using default configurations.
+       CKEDITOR.replace( 'editor1', {
+           uiColor: '#0E8CE4',
+           toolbar: [
+               [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink' ],
+               [ 'FontSize', 'TextColor', 'BGColor' ]
+           ]
+       });
+ 
+   </script>
+</body>
+</html>
