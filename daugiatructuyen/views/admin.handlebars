@@ -192,61 +192,45 @@
 
             <!-- Newsletter -->
 
-            <div class="newsletter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">
-                                <div class="newsletter_title_container">
-                                    <div class="newsletter_icon"><img src="../images/send.png" alt=""></div>
-                                    <div class="newsletter_title">Đăng ký thông tin</div>
-                                    <div class="newsletter_text">
-                                        <p>...Nhận mã giảm giá 20% cho lần mua đầu</p>
-                                    </div>
-                                </div>
-                                <div class="newsletter_content clearfix">
-                                    <form action="#" class="newsletter_form">
-                                        <input type="email" class="newsletter_input" required="required" placeholder="Nhập địa chỉ email">
-                                        <button class="newsletter_button">Đăng ký</button>
-                                    </form>
-                                    <!-- <div class="newsletter_unsubscribe_link"><a href="#">unsubscribe</a></div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+        
                 <div class="container">
                     <div>
                         <h2 style="margin:20px">Quản lý loại sản phẩm</h2>
+                        {{#if this.empty}}
+                        <div class="card-body">
+                            <p style="color: rgb(6, 172, 136); font-size:20px" class="card-text">
+                            Không có dữ liệu
+                            </p>
+                        </div>
+                        {{else}}
                         <table class="table table-hover table-responsive{-sm|-md|-lg|-xl}" style="margin:30px">
                             <thead>
                                 <tr>
                                     <th scope="col">STT</th>
                                     <th scope="col">Loại sản phẩm</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">Số lượng</th>
+                                    <th scope="col">Thao tác</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Máy tính xách tay</td>
-                                    <td><i class="material-icons" style="font-size:20px;color:#FCC541">border_color</i>
+
+                                {{#each this.categories}}
+                                    <tr>
+                                        <th scope="row" >{{id}}</th>
+                                        <td>{{type}}</td>
+                                        <td>{{id}}</td>
+                                        <td><i class="material-icons" style="font-size:20px;color:#FCC541">border_color</i>
                                         <i class="material-icons" style="padding-left:15px;color:#FF0000">delete</i>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Điện thoại di động</td>
-                                    <td><i class="material-icons" style="font-size:20px;color:#FCC541">border_color</i>
-                                        <i class="material-icons" style="padding-left:15px;color:#FF0000">delete</i>
-                                    </td>
-                                </tr>
+                                    </tr>
+                                {{/each}}
+                                
                                 <tr>
                                     <td colspan="3"> <i class="material-icons" style="font-size:25px;color:#87C540">control_point</i> </td>
                                 </tr>
                             </tbody>
                         </table>
+                        {{/if}}
                     </div>
 
                     <!-- Quan ly san pham -->
@@ -353,6 +337,32 @@
 
             <!-- Body -->
 
+
+            <!-- Newsletter -->
+
+        <div class="newsletter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">
+                                <div class="newsletter_title_container">
+                                    <div class="newsletter_icon"><img src="../../images/send.png" alt=""></div>
+                                    <div class="newsletter_title">Đăng ký thông tin</div>
+                                    <div class="newsletter_text"><p>...Nhận mã giảm giá 20% cho lần mua đầu</p></div>
+                                </div>
+                                <div class="newsletter_content clearfix">
+                                    <form action="#" class="newsletter_form">
+                                        <input type="email" class="newsletter_input" required="required" placeholder="Nhập địa chỉ email">
+                                        <button class="newsletter_button">Đăng ký</button>
+                                    </form>
+                                    <!-- <div class="newsletter_unsubscribe_link"><a href="#">unsubscribe</a></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	
             <!-- Footer -->
 
             <footer class="footer">
