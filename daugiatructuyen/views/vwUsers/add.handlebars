@@ -1,0 +1,64 @@
+<div class="card shadow mb-4">
+  <h4 class="card-header">
+    Category
+  </h4>
+  <div class="card-body">
+    <form method="POST">
+      
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtName">Name</p></p style="">
+        <input type="text" class="form-control" id="txtuname" name="uname" placeholder="Enter user name"
+          >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtBirthday">Birthday</p style="">
+        
+        <input type="date" class="form-control" id="txtbirthday" name="birthday" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" placeholder="Enter birthday"   
+           >
+           
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtPass">PassWord</p style="">
+        <input type="text" class="form-control" id="txtpass" name="pass" placeholder="Enter password"
+           >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtAddress">Address</p style="">
+        <input type="text" class="form-control" id="txtaddress" name="address" placeholder="Enter address"
+          >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtScore">Score</p style="">
+        <input type="text" class="form-control" id="txtscore" name="score" placeholder="Enter Score"
+           >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtEmail">Email</p style="">
+        <input type="text" class="form-control" id="txtemail" name="email" placeholder="Enter email"
+           >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtPosition">Position</p style="">
+        <input type="text" class="form-control" id="txtposition" name="position" placeholder="Enter position"
+           >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtState">State</p style="">
+        <input type="text" class="form-control" id="txtstate" name="state" placeholder="Enter state"
+           >
+      </div>
+      <a class="btn btn-outline-primary" href="/admin/users" role="button">
+        <i class="fa fa-backward" aria-hidden="true"></i>
+        List
+      </a>
+      <button type="submit" class="btn btn-outline-success" formaction="/admin/users/edits">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        Save
+      </button>
+      
+    </form>
+  </div>
+  <div class="card-footer text-muted">
+    Footer
+  </div>
+</div>

@@ -1,0 +1,126 @@
+{{!-- <div class="container">
+ --}}
+
+<div class="container-fluid mt-4">
+    <div style="margin-top: 70px;" class="row">
+      <div class="col-sm-3">
+        <div class="card shadow">
+          <h4 class="card-header">
+            Quản lý
+          </h4>
+          <div class="list-group list-group-flush">
+            <a href="/admin/categories" class="list-group-item list-group-item-action active">
+              Danh mục
+            </a>
+            <a href="/admin/product" class="list-group-item list-group-item-action">Sản phẩm</a>
+            <a href="/admin/users" class="list-group-item list-group-item-action">Người dùng</a>
+            <a href="#" class="list-group-item list-group-item-action">Duyệt nâng cấp</a>
+            {{!-- <a href="#" class="list-group-item list-group-item-action">Duyệt hạ cấp</a> --}}
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9">
+                    <div>
+                        <h2 style="margin:20px">Quản lý danh mục sản phẩm</h2>
+                        {{#if this.empty}}
+                        <div class="card-body">
+                            <p style="color: rgb(6, 172, 136); font-size:20px" class="card-text">
+                            Không có dữ liệu
+                            </p>
+                        </div>
+                        {{else}}
+                        <table class="table table-hover table-responsive{-sm|-md|-lg|-xl}" style="margin:30px">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Loại sản phẩm</th>
+                                    <th scope="col">Số lượng</th>
+                                    <th scope="col">Thay đổi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {{#each this.categories}}
+                                    <tr>
+                                        <th scope="row" >{{id}}</th>
+                                        <td>{{type}}</td>
+                                        <td>{{id}}</td>
+                                        <td>
+                                            <a style="background: white; border-style:none" class="btn btn-sm btn-primary" href="/admin/categories/edit/{{id}}" role="button">
+                                                <i class="material-icons" style="font-size:20px;color:#FCC541">border_color</i>
+                                            </a>
+                                           
+
+                                            {{!-- <a style="background: white; border-style:none" class="btn btn-sm btn-primary" href="/admin/categories/del" role="button">
+                                                <i class="material-icons" style="padding-left:15px;color:#FF0000">delete</i>
+                                            </a>
+                                             --}}
+                                            {{!-- <button type="submit" class="btn btn-outline-danger" formaction="/admin/categories/del">
+                                                <i class="material-icons" style="padding-left:15px;color:#FF0000">delete</i>
+                                                
+                                            </button> --}}
+                                        
+                                    </td>
+                                    </tr>
+                                {{/each}}
+                                
+                                <tr>
+                                    <td colspan="3">
+                                         <a class="btn btn-outline-success" href="/admin/categories/add" role="button">
+                                            {{!-- <i class="material-icons" style="font-size:25px;color:#87C540">control_point</i> --}}
+                                      Thêm danh mục
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        {{/if}}
+                    </div>
+
+                    
+                    
+                        <h3 style="margin:20px">Danh sách bidder xin nâng cấp tài khoản</h3>
+                        <table class="table table-hover table-responsive{-sm|-md|-lg|-xl}" style="margin:30px">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Tên đăng nhập</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col"></th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>nvtuan0903</td>
+                                    <td>nvtuan@gmail.com</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Nâng cấp từ bider lên seller</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>bachtuyenlun</td>
+                                    <td>bachtuyenlun0033@gmail.com</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Nâng cấp từ bider lên seller</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+                    
+            </div>

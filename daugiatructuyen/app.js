@@ -1,7 +1,12 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
- 
+require('express-async-errors');
 var app = express();
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
+
 app.engine('handlebars', exphbs({
     defaultLayout:'main.handlebars',
     layoutsDir:'views/_layouts'
@@ -107,8 +112,23 @@ app.get('/watch_list',(req,res)=>{
     res.render('watch_list');
 })
 
-app.use('/categories', require('./routes/admin/category.routes'));
+app.use('/admin/categories', require('./routes/admin/category.routes'));
+app.use('/admin/product', require('./routes/admin/product.routes'));
+app.use('/admin/users', require('./routes/admin/users.routes'));
+app.use((req, res, next) => {
+    // res.render('vwError/404');
+    res.send('You\'re lost');
+  })
+  
+  //
+  // default error handler
+  
+  app.use((err, req, res, next) => {
+    // res.render('vwError/index');
+    console.error(err.stack);
+    res.status(500).send('View error on console.');
+  })
 
-app.listen(3030,()=>{
-    console.log('web server is running at http://localhost:3030');
+app.listen(3000,()=>{
+    console.log('web server is running at http://localhost:3000');
 })

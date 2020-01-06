@@ -1,0 +1,69 @@
+<div class="card shadow mb-4">
+  <h4 class="card-header">
+    Category
+  </h4>
+  <div class="card-body">
+    <form method="POST">
+      <div class="form-group">
+        {{!-- <label for="txtCatId">#</label> --}}
+        <input type="text" class="form-control" id="txtid" name="id" readonly value="{{this.users.id}}">
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtName">Name</p></p style="">
+        <input type="text" class="form-control" id="txtuname" name="uname" placeholder="Enter user name"
+          autofocus value="{{this.users.uname}}">
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtBirthday">Birthday</p style="">
+        {{!-- <%= Html.Encode("1998-01-08T17:00:00.000Z".BirthDate.ToString("MM/dd/yyyy")) %> --}}
+        <input type="text" class="form-control" id="txtbirthday" name="birthday" placeholder="Enter birthday"
+           value="{{this.users.birthday}}">
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtPass">PassWord</p style="">
+        <input type="text" class="form-control" id="txtpass" name="pass" placeholder="Enter password"
+           value="{{this.users.pass}}">
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtAddress">Address</p style="">
+        <input type="text" class="form-control" id="txtaddress" name="address" placeholder="Enter address"
+           value="{{this.users.address}}">
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtScore">Score</p style="">
+        <input type="text" class="form-control" id="txtscore" name="score" placeholder="Enter Score"
+           value="{{this.users.score}}">
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtEmail">Email</p style="">
+        <input type="text" class="form-control" id="txtemail" name="email" placeholder="Enter email"
+           value="{{this.users.email}}">
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtPosition">Position</p style="">
+        <input type="text" class="form-control" id="txtposition" name="position" placeholder="Enter position"
+           value="{{this.users.position}}">
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtState">State</p style="">
+        <input type="text" class="form-control" id="txtstate" name="state" placeholder="Enter state"
+           value="{{this.users.state}}">
+      </div>
+      <a class="btn btn-outline-primary" href="/admin/users" role="button">
+        <i class="fa fa-backward" aria-hidden="true"></i>
+        List
+      </a>
+      <button type="submit" class="btn btn-outline-success" formaction="/admin/users/edits">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        Save
+      </button>
+      <button type="submit" class="btn btn-outline-danger" formaction="/admin/users/del">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+        Delete
+      </button>
+    </form>
+  </div>
+  <div class="card-footer text-muted">
+    Footer
+  </div>
+</div>
