@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
 
   try {
    
-    const rows = await productModel.all();
+    const rows = await productModel.allWithDetails();
     res.render('vwProducts/index', {
       product: rows,
       empty: rows.length === 0
@@ -18,17 +18,17 @@ router.get('/', async (req, res) => {
   }
 })
 
-// router.get('/add', async (req, res) => {
+router.get('/add', async (req, res) => {
 
-//   res.render('vwProducts/index')
-// })
+  res.render('vwProducts/add')
+})
 
-// router.post('/add', async (req, res) => {
-//   // console.log(req.body);
+router.post('/add', async (req, res) => {
+  // console.log(req.body);
  
-//   const result = await productModel.add(req.body);
-//   res.render('vwProducts/index');
-// })
+  const result = await productModel.add(req.body);
+  res.render('vwProducts/add');
+})
 
 router.get('/err', (req, res) => {
 

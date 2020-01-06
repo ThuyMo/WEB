@@ -9,13 +9,13 @@ const router = express.Router();
 router.get('/:id/product', async (req, res) => {
 
   for (const c of res.locals.lcCategories) {
-    if (c.CatID === +req.params.id) {
+    if (c.category === +req.params.id) {
       c.isActive = true;
     }
   }
 
   const rows = await productModel.allByCat(req.params.id);
-  res.render('vwProduct/allByCat', {
+  res.render('vwProducts/allByCat', {
     products: rows,
     empty: rows.length === 0
   });

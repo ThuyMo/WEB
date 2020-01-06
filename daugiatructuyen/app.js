@@ -1,6 +1,8 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
 require('express-async-errors');
+
+
 var app = express();
 app.use(express.json());
 app.use(express.urlencoded({
@@ -112,9 +114,10 @@ app.get('/watch_list',(req,res)=>{
     res.render('watch_list');
 })
 
-app.use('/admin/categories', require('./routes/admin/category.routes'));
-app.use('/admin/product', require('./routes/admin/product.routes'));
-app.use('/admin/users', require('./routes/admin/users.routes'));
+require('./middlewares/locals.mdw')(app);
+require('./middlewares/routes.mdw')(app);
+
+
 app.use((req, res, next) => {
     // res.render('vwError/404');
     res.send('You\'re lost');

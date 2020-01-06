@@ -18,17 +18,17 @@ router.get('/', async (req, res) => {
   }
 })
 
-// router.get('/add', async (req, res) => {
+router.get('/add', async (req, res) => {
 
-//   res.render('vwUsers/index')
-// })
+  res.render('vwUsers/add')
+})
 
-// router.post('/add', async (req, res) => {
-//   // console.log(req.body);
+router.post('/add', async (req, res) => {
+  console.log(req.body);
  
-//   const result = await usersModel.add(req.body);
-//   res.render('vwUsers/index');
-// })
+  const result = await usersModel.add(req.body);
+  res.render('vwUsers/add');
+})
 
 router.get('/err', (req, res) => {
 
@@ -39,8 +39,8 @@ router.get('/err', (req, res) => {
 router.get('/edit/:id', async (req, res) => {
   const rows = await usersModel.single(req.params.id);
   
-  console.log(req.params.id);
-  // console.log(rows.body.);
+  // console.log(req.params.id);
+  console.log(rows.body);
   if (rows.length === 0) {
     throw new Error('Invalid category id');
   }
@@ -60,16 +60,16 @@ router.post('/patch', async (req, res) => {
 
 router.post('/edits', async (req, res) => {
   
-  
+
   const result = await usersModel.edits(req.body);
-  // console.log(req.body);
+  console.log(req.body);
   res.redirect('/admin/users');
 })
 
-// router.post('/del', async (req, res) => {
-//   const result = await usersModel.del(req.body.id);
+router.post('/del', async (req, res) => {
+  const result = await usersModel.del(req.body.id);
   
-//   res.redirect('/admin/product');
-// })
+  res.redirect('/admin/users');
+})
 
 module.exports = router;

@@ -10,5 +10,21 @@ module.exports = {
     delete entity.id;
     // console.log(condition, entity);
     return db.patch('category', entity, condition);
-  }
+  },
+
+  allWithDetails: _ => {
+    const sql = `
+    select c.id, c.type, count(p.id) as num_of_products
+    from category c left join product p on c.id = p.category
+    group by c.id, c.type`;
+    return db.load(sql);
+  },
+  countNumber: id => {
+    const sql = `
+    select c.id, c.type, count(p.id) as num_of_products
+    from category c left join product p on c.id = p.category
+    where c.id= ${id}
+    group by c.id, c.type`;
+    return db.load(sql);
+  },
 };

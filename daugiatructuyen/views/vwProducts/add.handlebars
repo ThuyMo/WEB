@@ -1,0 +1,67 @@
+
+
+<div class="card shadow mb-4">
+  <h4 class="card-header">
+    Category
+  </h4>
+  <div class="card-body">
+    <form method="POST">
+      
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtcategory">category</p></p style="">
+        <input type="text" class="form-control" id="txtcategory" name="category" placeholder="Enter category"
+          autofocus >
+          
+      </div>
+      
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtname_product">Name_product</p style="">
+        {{!-- <%= Html.Encode("1998-01-08T17:00:00.000Z".BirthDate.ToString("MM/dd/yyyy")) %> --}}
+        <input type="text" class="form-control" id="txtname_product" name="name_product" placeholder="Enter name_product"
+           >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtname_avata">Name_avata</p style="">
+        <input type="text" class="form-control" id="txtname_avata" name="name_avata" placeholder="Enter name_avata"
+           >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtprice_step">Price_step</p style="">
+        <input type="text" class="form-control" id="txtprice_step" name="price_step" placeholder="Enter price_step"
+           >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtwinner">Winner</p style="">
+        <input type="text" class="form-control" id="txtwinner" name="winner" placeholder="Enter winner"
+           >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtprice_maketing">price_maketing</p style="">
+        <input type="text" class="form-control" id="txtprice_maketing" name="price_maketing" placeholder="Enter price_maketing"
+           >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtstate">state</p style="">
+        <input type="text" class="form-control" id="txtstate" name="state" placeholder="Enter state"
+           >
+      </div>
+      <div class="form-group">
+        <p style="color: black;padding-bottom:20px" for="txtseller">seller</p style="">
+        <input type="text" class="form-control" id="txtseller" name="seller" placeholder="Enter seller"
+           >
+      </div>
+      
+      <a class="btn btn-outline-primary" href="/admin/product" role="button">
+        <i class="fa fa-backward" aria-hidden="true"></i>
+        Danh sách
+      </a>
+      
+      <button type="submit" class="btn btn-outline-success">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        Thêm
+      </button>
+      
+    </form>
+  </div>
+  
+</div>

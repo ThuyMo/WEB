@@ -12,14 +12,14 @@
   {{else}}
   <div class="card-body">
     <div class="row">
-      {{#each this.product}}
+      {{#each this.products}}
       <div class="col-sm-4 mb-3">
         <div class="card h-100">
-          <img src="/imgs/sp/{{ProID}}/main_thumbs.jpg" alt="{{ProName}}" title="{{ProName}}" class="card-img-top">
+          <img src="/images/banner_product.png" alt="{{name_product}}" title="{{name_product}}" class="card-img-top">
           <div class="card-body">
-            <h6 class="card-title">{{ProName}}</h6>
-            <h5 class="card-title text-danger">{{format Price}}</h5>
-            <p class="card-text">{{TinyDes}}</p>
+            <h6 class="card-title">{{name_product}}</h6>
+            {{!-- <h5 class="card-title text-danger">{{format Price}}</h5>
+            <p class="card-text">{{TinyDes}}</p> --}}
           </div>
           <div class="card-footer text-center">
             <a class="btn btn-sm btn-outline-primary" href="#" role="button">
