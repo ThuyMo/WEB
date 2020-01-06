@@ -8,12 +8,12 @@
           <h4 class="card-header">
             Quản lý
           </h4>
-          <div class="list-group list-group-flush">
-            <a href="/admin/categories" class="list-group-item list-group-item-action active">
-              Danh mục
-            </a>
-            <a href="/admin/product" class="list-group-item list-group-item-action">Sản phẩm</a>
-            <a href="/admin/users" class="list-group-item list-group-item-action">Người dùng</a>
+          <div class="list-group list-group-flush ">
+              
+            <a href="/admin/categories" class="list-group-item list-group-item-action  active"> Danh mục</a>
+              
+            <a href="/admin/product" class="list-group-item list-group-item-action  ">Sản phẩm</a>
+            <a href="/admin/users" class="list-group-item list-group-item-action ">Người dùng</a>
             <a href="#" class="list-group-item list-group-item-action">Duyệt nâng cấp</a>
             {{!-- <a href="#" class="list-group-item list-group-item-action">Duyệt hạ cấp</a> --}}
             
@@ -22,7 +22,7 @@
       </div>
       <div class="col-sm-9">
                     <div>
-                        <h2 style="margin:20px">Quản lý danh mục sản phẩm</h2>
+                        <h2 style="margin:0px">Quản lý danh mục sản phẩm</h2>
                         {{#if this.empty}}
                         <div class="card-body">
                             <p style="color: rgb(6, 172, 136); font-size:20px" class="card-text">
@@ -41,25 +41,18 @@
                             </thead>
                             <tbody>
 
-                                {{#each this.categories}}
+                                {{#each lcCategories}}
                                     <tr>
                                         <th scope="row" >{{id}}</th>
                                         <td>{{type}}</td>
-                                        <td>{{id}}</td>
+                                        <td>{{num_of_products}}</td>
                                         <td>
                                             <a style="background: white; border-style:none" class="btn btn-sm btn-primary" href="/admin/categories/edit/{{id}}" role="button">
                                                 <i class="material-icons" style="font-size:20px;color:#FCC541">border_color</i>
                                             </a>
                                            
 
-                                            {{!-- <a style="background: white; border-style:none" class="btn btn-sm btn-primary" href="/admin/categories/del" role="button">
-                                                <i class="material-icons" style="padding-left:15px;color:#FF0000">delete</i>
-                                            </a>
-                                             --}}
-                                            {{!-- <button type="submit" class="btn btn-outline-danger" formaction="/admin/categories/del">
-                                                <i class="material-icons" style="padding-left:15px;color:#FF0000">delete</i>
-                                                
-                                            </button> --}}
+                                           
                                         
                                     </td>
                                     </tr>

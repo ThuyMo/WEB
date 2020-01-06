@@ -21,7 +21,7 @@
       </div>
       <div class="col-sm-9">
                     <div>
-                        <h2 style="margin:20px">Quản lý  người dùng</h2>
+                        <h2 >Quản lý  người dùng</h2>
                         {{#if this.empty}}
                         <div class="card-body">
                             <p style="color: rgb(6, 172, 136); font-size:20px" class="card-text">
@@ -56,9 +56,7 @@
                                             <a style="background: white; border-style:none" class="btn btn-sm btn-primary" href="/admin/users/edit/{{id}}" role="button">
                                                 <i class="material-icons" style="font-size:20px;color:#FCC541">border_color</i>
                                             </a>
-                                            <a style="background: white; border-style:none" class="btn btn-sm btn-primary" href="/admin/users/add" role="button">
-                                                <i class="material-icons" style="font-size:20px;color:#FCC541">border_color</i>
-                                            </a>
+                                           
 
                                             <button type="submit" class="btn btn-danger" formaction="/admin/users/patch">
                                               <i class="fa fa-check" aria-hidden="true"></i>
@@ -71,7 +69,14 @@
 
                                     
                                 {{/each}}
-                                
+                                <tr>
+                                    <td colspan="3">
+                                         <a class="btn btn-outline-success" href="/admin/users/add" role="button">
+                                            {{!-- <i class="material-icons" style="font-size:25px;color:#87C540">control_point</i> --}}
+                                      Thêm người dùng
+                                        </a>
+                                    </td>
+                                </tr>
                                 
                             </tbody>
                         </table>

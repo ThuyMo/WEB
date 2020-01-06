@@ -53,6 +53,8 @@ router.post('/patch', async (req, res) => {
 })
 
 router.post('/del', async (req, res) => {
+  // const rows=await categoryModel.countNumber(req.body.id);
+  // console.log(rows.id);
   const result = await categoryModel.del(req.body.id);
   // console.log(result.affectedRows);
   res.redirect('/admin/categories');
