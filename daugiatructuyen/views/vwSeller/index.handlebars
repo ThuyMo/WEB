@@ -1,0 +1,95 @@
+{{!-- <div class="container">
+ --}}
+
+<div class="container-fluid mt-4">
+    <div style="margin-top: 70px;" class="row">
+      <div class="col-sm-3">
+        <div class="card shadow">
+          <h4 class="card-header">
+            Quản lý
+          </h4>
+          <div class="list-group list-group-flush">
+            <a href="/admin/categories" class="list-group-item list-group-item-action ">
+              Danh mục
+            </a>
+            <a href="/admin/product" class="list-group-item list-group-item-action active">Sản phẩm</a>
+            <a href="/admin/users" class="list-group-item list-group-item-action">Người dùng</a>
+            <a href="#" class="list-group-item list-group-item-action">Duyệt nâng cấp</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9">
+                    <div>
+                        <h2 >Quản lý  sản phẩm</h2>
+                        {{#if this.empty}}
+                        <div class="card-body">
+                            <p style="color: rgb(6, 172, 136); font-size:20px" class="card-text">
+                            Không có dữ liệu
+                            </p>
+                        </div>
+                        {{else}}
+                        <table class="table table-hover table-responsive{-sm|-md|-lg|-xl}" style="margin:30px">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Tên sản phẩm</th>
+                                    <th scope="col">Loại sản phẩm</th>
+                                    <th scope="col">Thay đổi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {{#each this.product}}
+                                    <tr>
+                                        <th scope="row" >{{id}}</th>
+                                        <td>{{name_product}}</td>
+                                        <td>{{type}}</td>
+                                        <td>
+                                            {{!-- <a style="background: white; border-style:none" class="btn btn-sm btn-primary" href="/admin/product/del" role="button">
+                                                <i class="material-icons" style="font-size:20px;color:#FCC541">border_color</i>
+                                            </a> --}}
+                                      
+                                            <td>
+                                          
+
+                                          <form method="POST">
+
+                                            <input style="display: none;" type="text" class="form-control" id="txtid" name="id" readonly value={{id}}>
+                                            
+
+                                            <button type="submit" class="btn btn-danger" formaction="/admin/product/del">
+                                              {{!-- <i class="fa fa-check" aria-hidden="true"></i> --}}
+                                              Xóa
+                                            </button>
+      
+                                          </form>   
+                                    </td>
+                                          
+                                    </td>
+                                    </tr>
+                                {{/each}}
+                                
+                                <tr>
+                                    <td colspan="3">
+                                         <a class="btn btn-outline-success" href="/admin/product/add" role="button">
+                                            {{!-- <i class="material-icons" style="font-size:25px;color:#87C540">control_point</i> --}}
+                                      Thêm sản phẩm
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        {{/if}}
+                    </div>
+
+                    
+
+      </div>
+    </div>
+  </div>
+
+
+
+                    
+</div>
